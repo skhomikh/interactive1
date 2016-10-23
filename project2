@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<title>
+		Project 2
+	</title>
+
+	<style>
+
+	body {
+		margin:0;
+		background-color: #b2b2b2; 
+		font-family: 'Lato', sans-serif;
+	}	
+
+	.poster {
+		width: 500px;
+		background-color: white;
+		margin: auto;
+		margin-top: 60px;
+
+	}
+
+	.oval {
+	  	border-radius: 50%;
+      	width: 35px;
+     	height: 20px;
+      	border-style: solid;
+      	border-color: #a8e6a1;
+      	margin-right: 27px;
+      	text-align: center;
+      	padding-bottom: 3px;
+      	color: #a8e6a1;
+	}
+
+	.number {
+      	float: left;
+      	width: 35px;
+      	height: 35px; 
+      	margin-left: 50px;	
+      	margin-right: 20px;
+      	margin-top: 5px;
+	}
+
+	.row {
+		width:500px;
+		height: 40px;
+		padding: 2px 0;
+		overflow: auto;
+	}
+
+
+	.a {
+
+	 	float: left;
+ 
+
+      }
+
+	.b {
+
+		float: left;
+      	
+	}
+
+	.c {
+
+		float: left;
+      	
+	}
+
+	.d {
+
+		float: left;
+      	
+	}
+
+	.e {
+
+		float: left;
+      	
+	}
+
+	.clickhere {
+		width: 500px;
+		height: 60px;
+		position: fixed;
+		top: 0;
+		background-color: #a8e6a1;
+		text-align: center;
+		font-size: 35px;
+	
+		
+	}
+
+	.clickhere.pressed {
+		color: #999;
+		background-color: #DDD;
+		
+	}
+
+
+
+	.r1 .fill {
+		animation: fill 1s forwards;
+	}
+
+	.r2 .fill {
+		animation: fill 0.5s 1s forwards;
+	}
+
+	.r3 .fill {
+		animation: fill 0.5s 2s forwards;
+	}
+
+	.r4 .fill {
+		animation: fill 0.5s 3s forwards;
+	}
+
+	.r5 .fill {
+		animation: fill 0.5s 4s forwards;
+	}
+
+	.r6 .fill {
+		animation: fill 0.5s 5s forwards;
+	}
+
+	.r7 .fill {
+		animation: fill 0.5s 6s forwards;
+	}
+
+	.r8 .fill {
+		animation: fill 0.5s 7s forwards;
+	}
+
+	.r9 .fill {
+		animation: fill 0.5s 8s forwards;
+	}
+
+	.r10 .fill {
+		animation: fill 0.5s 9s forwards;
+	}
+
+	.r11 .fill {
+		animation: fill 0.5s 10s forwards;
+	}
+
+	.r12 .fill {
+		animation: fill 0.5s 11s forwards;
+	}
+
+	.r13 .fill {
+		animation: fill 0.5s 12s forwards;
+	}
+
+	.r14 .fill {
+		animation: fill 0.5s 13s forwards;
+	}
+
+	.r15 .fill {
+		animation: fill 0.5s 14s forwards;
+	}
+
+	
+
+	
+
+
+	@keyframes fill {
+		from {
+			background-color: #FFF;
+		}
+		to {
+			background-color: red;
+		}
+	}
+
+		
+
+
+
+	</style>
+
+<script>
+
+	$(document).ready(function() {
+
+				/* click on button 1, show the first line */
+				$(".btn01").click(function(){
+					$(this).addClass('pressed');
+					$(".text01").addClass('.r1 .fill');
+				});
+
+			
+			});
+
+	</script>
+
+</head>
+
+	<body>
+			<div class="poster">
+
+				<div class="row r1">
+
+					<div class="number">1</div>
+					<div class="oval a fill">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r2">
+
+					<div class="number">2</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c fill">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r3">
+
+					<div class="number">3</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d ">d</div>
+					<div class="oval e fill">e</div>
+
+				</div>
+
+				<div class="row r4">
+
+					<div class="number">4</div>
+					<div class="oval a">a</div>
+					<div class="oval b fill">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r5">
+
+					<div class="number">5</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e fill">e</div>
+
+				</div>
+
+				<div class="row r6">
+
+					<div class="number">6</div>
+					<div class="oval a ">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c fill">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r7">
+
+					<div class="number">7</div>
+					<div class="oval a fill">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r8">
+
+					<div class="number">8</div>
+					<div class="oval a fill">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r9">
+
+					<div class="number">9</div>
+					<div class="oval a fill">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r10">
+
+					<div class="number">10</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d fill">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r12">
+
+					<div class="number">11</div>
+					<div class="oval a">a</div>
+					<div class="oval b fill">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r13">
+
+					<div class="number">12</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c fill">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row r14">
+
+					<div class="number">13</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c fill">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row 15">
+
+					<div class="number">14</div>
+					<div class="oval a fill">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="number">15</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+			<div class="clickhere">Begin your trip</div>
+
+			</div>
+	</body>
+</html>
