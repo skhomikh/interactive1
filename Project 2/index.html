@@ -18,13 +18,40 @@
 		font-family: 'Lato', sans-serif;
 	}	
 
+	.car {
+      animation: around 12s linear forwards;
+      transform: rotate(0);
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+
 	.poster {
 		width: 500px;
 		background-color: white;
 		margin: auto;
 		margin-top: 60px;
+		padding-top:20px;
+		position: relative;
 
 	}
+
+	.square {
+		background-color: black;
+		height: 3px;
+    	width: 21px;
+    	position: relative;
+    	top: 17px;
+    	
+    	
+	}
+
+	.bigsquare {
+		background-color: black;
+		height: 23px;
+    	width: 23px;
+	}
+
 
 	.oval {
 	  	border-radius: 50%;
@@ -47,9 +74,18 @@
       	margin-top: 5px;
 	}
 
+	img {
+		float: right;
+    	position: relative;
+	    right: 13px;
+	    bottom: 1px;
+	    width: 30px;
+
+	}
+
 	.row {
 		width:500px;
-		height: 40px;
+		/*height: 40px;*/
 		padding: 2px 0;
 		overflow: auto;
 	}
@@ -87,20 +123,67 @@
 	}
 
 	.clickhere {
-		width: 500px;
-		height: 60px;
-		position: fixed;
-		top: 0;
-		background-color: #a8e6a1;
-		text-align: center;
-		font-size: 35px;
+		    width: 500px;
+    /* height: 60px; */
+    position: fixed;
+    top: 0;
+    background-color: #15724b;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    padding: 14px 0px;
+    z-index: 1000;
+  	
+	}
 
-		
+
+	.endtrip {
+		    width: 500px;
+    /* height: 60px; */
+    position: fixed;
+    bottom: 0;
+    background-color: #15724b;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px 0px;
+    z-index: 1000;
+  	
+	}
+
+
+	.circle {
+		    border-radius: 50%;
+    border-width: 2px;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    float: right;
+    position: relative;
+    right: 84px;
+    top: 12px;
+
+	}
+
+	.arrow {
+		border-style: solid;
+		border-width: 2px;
+		border: black;
+		width:20px;
+		height:20px;
+		z-index:1000;
+
 	}
 
 	.clickhere.pressed {
 		color: #999;
 		background-color: #DDD;
+		
+
+
 		
 	}
 
@@ -167,6 +250,9 @@
 	}
 
 	
+	.scroll {
+		animation: scroll_down 20s forwards;
+	}
 
 	
 
@@ -180,6 +266,68 @@
 		}
 	}
 
+	
+
+
+	@keyframes scroll_down {
+		from {
+			transform: translate(0,0);
+		}
+		to {
+			transform: translate(0,-500px);
+		}
+	}
+
+	 @keyframes around {
+    0% {
+      top: 50px;
+      left: 50px;
+    }
+
+    10% {
+    	transform: rotate(0deg)
+    }
+
+    11% {
+    	transform: rotate (90deg)
+    	top: 40px;
+    	left: 50px;
+    }
+
+    24% { 
+      transform: rotate(0deg); 
+    }
+    25% {
+      transform: rotate(90deg);
+      top: 50px;
+      left: 250px;
+    }
+    49% { 
+      transform: rotate(90deg); 
+    }
+    50% {
+      transform: rotate(180deg); 
+      top: 250px;
+      left: 250px;
+    }
+    74% { 
+      transform: rotate(180deg); 
+    }
+    75% {
+      transform: rotate(270deg); 
+      top: 250px;
+      left: 500px;
+    }
+    99% {
+      transform: rotate(270deg);
+    }
+    100% { 
+      transform: rotate(360deg);  
+      top: 700px;
+      left: 500px;
+    }
+  }
+
 		
 
 
@@ -192,6 +340,8 @@
 
 				/* click on button 1, show the first line */
 				$(".clickhere").click(function(){
+
+					// $(".poster").addClass('scroll');
 					$(".r1 .a").addClass('fill');
 					$(".r2 .c").addClass('fill');
 					  $(".r3 .e").addClass('fill');
@@ -221,10 +371,15 @@
 	<body>
 			<div class="poster">
 
-			<div class="clickhere"> {{{Begin your trip}}} </div>
+			<div class="clickhere"> Begin your trip <img src="arrow.png" /> </div>
+
+			<div class="car"> 
+				<img src="car.png" />
+			</div>
+
 
 				<div class="row r1">
-
+					<div class="square"> </div>
 					<div class="number">1</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -236,6 +391,7 @@
 
 				<div class="row r2">
 
+					<div class="square"> </div>
 					<div class="number">2</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -247,6 +403,7 @@
 
 				<div class="row r3">
 
+					<div class="square"> </div>
 					<div class="number">3</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -258,6 +415,7 @@
 
 				<div class="row r4">
 
+					<div class="square"> </div>
 					<div class="number">4</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -269,6 +427,7 @@
 
 				<div class="row r5">
 
+					<div class="square"> </div>
 					<div class="number">5</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -280,6 +439,7 @@
 
 				<div class="row r6">
 
+					<div class="square"> </div>
 					<div class="number">6</div>
 					<div class="oval a ">a</div>
 					<div class="oval b">b</div>
@@ -291,6 +451,7 @@
 
 				<div class="row r7">
 
+					<div class="square"> </div>
 					<div class="number">7</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -302,6 +463,7 @@
 
 				<div class="row r8">
 
+					<div class="square"> </div>
 					<div class="number">8</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -313,6 +475,7 @@
 
 				<div class="row r9">
 
+					<div class="square"> </div>
 					<div class="number">9</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -324,6 +487,7 @@
 
 				<div class="row r10">
 
+					<div class="square"> </div>
 					<div class="number">10</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -335,6 +499,7 @@
 
 				<div class="row r12">
 
+					<div class="square"> </div>
 					<div class="number">11</div>
 					<div class="oval a">a</div>
 					<div class="oval b ">b</div>
@@ -346,6 +511,7 @@
 
 				<div class="row r13">
 
+					<div class="square"> </div>
 					<div class="number">12</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -357,6 +523,7 @@
 
 				<div class="row r14">
 
+					<div class="square"> </div>
 					<div class="number">13</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -368,6 +535,7 @@
 
 				<div class="row 15">
 
+					<div class="square"> </div>
 					<div class="number">14</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -379,6 +547,7 @@
 
 				<div class="row">
 
+					<div class="square"> </div>
 					<div class="number">15</div>
 					<div class="oval a">a</div>
 					<div class="oval b">b</div>
@@ -387,6 +556,140 @@
 					<div class="oval e">e</div>
 
 				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">15</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">16</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">17</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">18</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">19</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">20</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">21</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+					<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">22</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+					<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">23</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+					<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">24</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+					<div class="row">
+
+					<div class="square"> </div>
+					<div class="number">25</div>
+					<div class="oval a">a</div>
+					<div class="oval b">b</div>
+					<div class="oval c">c</div>
+					<div class="oval d">d</div>
+					<div class="oval e">e</div>
+
+				</div>
+
+				<div class="endtrip"> End Your Trip </div>
 
 
 			</div>
