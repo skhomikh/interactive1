@@ -27,7 +27,7 @@
     }
 
     .go {
-      animation: around 25s linear forwards;
+      animation: around 30s linear forwards;
     }
 
     .result {
@@ -40,7 +40,7 @@
     }
 
     .show-result {
-    	animation: result 1s 25s forwards;
+    	animation: result 1s 26s forwards;
     }
 
 	.poster {
@@ -63,6 +63,8 @@
     	
     	
 	}
+
+
 
 	.bigsquare {
 		background-color: black;
@@ -92,12 +94,16 @@
       	margin-top: 5px;
 	}
 
-	img {
+	.carbutton {
 		float: right;
     	position: relative;
 	    right: 13px;
 	    bottom: 1px;
 	    width: 30px;
+
+	}
+
+	.star {
 
 	}
 
@@ -335,11 +341,14 @@
 	@keyframes result {
 		from{ opacity:0;
 
+
 		}
 
 		to{ opacity:1;
 
 		}
+
+
 	}
 
 	
@@ -719,10 +728,10 @@
 	<body>
 			<div class="poster">
 
-			<div class="clickhere"> Begin your trip <img src="arrow.png" /> </div>
+			<div class="clickhere"> Begin your trip <img class="carbutton" src="arrow.png" /> </div>
 
 			<div class="car"> 
-				<img src="car.png" />
+				<img class="carbutton" src="car.png" />
 			</div>
 
 
@@ -1027,7 +1036,7 @@
 
 			
 
-				<div class="result">result</div>
+				<div class="result"> <img src="starsblank.png" /></div>
 
 				<div class="endtrip"> End Your Trip </div>
 
