@@ -31,12 +31,13 @@
     }
 
     .result {
-    	background-color: yellow;
+    	background-color: transparent;
 	    height: 200px;
 	    width: 100%;
 	    opacity: 0;
 	    position: absolute;
 	    bottom: 0;
+	    background-image: <img src="star1.png"/>
     }
 
     .show-result {
@@ -339,12 +340,15 @@
 	}
 
 	@keyframes result {
-		from{ opacity:0;
-
+		0% { background-image: <img src="star1.png"/>
 
 		}
 
-		to{ opacity:1;
+		50% { background-image: <img src="star2.png"/>
+
+		}
+
+		100% { background-image: <img src="star3.png"/>
 
 		}
 
@@ -1036,7 +1040,7 @@
 
 			
 
-				<div class="result"> <img src="starsblank.png" /></div>
+				<div class="result"> </div>
 
 				<div class="endtrip"> End Your Trip </div>
 
