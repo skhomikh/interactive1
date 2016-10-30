@@ -19,11 +19,28 @@
 	}	
 
 	.car {
-      animation: around 12s linear forwards;
       transform: rotate(0);
       position: absolute;
-      top: 50px;
-      left: 50px;
+      top: 33px;
+      left: -40px;
+      transform-origin: 0;
+    }
+
+    .go {
+      animation: around 25s linear forwards;
+    }
+
+    .result {
+    	background-color: yellow;
+	    height: 200px;
+	    width: 100%;
+	    opacity: 0;
+	    position: absolute;
+	    bottom: 0;
+    }
+
+    .show-result {
+    	animation: result 1s 25s forwards;
     }
 
 	.poster {
@@ -33,6 +50,7 @@
 		margin-top: 60px;
 		padding-top:20px;
 		position: relative;
+		overflow: hidden;
 
 	}
 
@@ -134,21 +152,25 @@
     text-transform: uppercase;
     padding: 14px 0px;
     z-index: 1000;
-  	
+  	cursor: pointer;
+	}
+
+	.clickhere:hover {
+    background-color: red;
 	}
 
 
 	.endtrip {
 		    width: 500px;
     /* height: 60px; */
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #15724b;
     text-align: center;
     font-size: 25px;
     color: white;
     text-transform: uppercase;
-    padding: 4px 0px;
+    padding: 13px 0px;
     z-index: 1000;
   	
 	}
@@ -190,7 +212,7 @@
 
 
 	.r1 .fill {
-		animation: fill 1s forwards;
+		animation: fill 0s forwards;
 	}
 
 	.r2 .fill {
@@ -249,6 +271,50 @@
 		animation: fill 0.5s 14s forwards;
 	}
 
+	.r16 .fill {
+		animation: fill 0.5s 15s forwards;
+	}
+
+	.r17 .fill {
+		animation: fill 0.5s 16s forwards;
+	}
+
+	.r18 .fill {
+		animation: fill 0.5s 17s forwards;
+	}
+
+	.r19 .fill {
+		animation: fill 0.5s 18s forwards;
+	}
+
+	.r20 .fill {
+		animation: fill 0.5s 19s forwards;
+	}
+
+	.r21 .fill {
+		animation: fill 0.5s 20s forwards;
+	}
+
+	.r22 .fill {
+		animation: fill 0.5s 21s forwards;
+	}
+
+	.r23 .fill {
+		animation: fill 0.5s 22s forwards;
+	}
+
+	.r24 .fill {
+		animation: fill 0.5s 23s forwards;
+	}
+
+	.r24 .fill {
+		animation: fill 0.5s 24s forwards;
+	}
+
+	.r25 .fill {
+		animation: fill 0.5s 24s forwards;
+	}
+
 	
 	.scroll {
 		animation: scroll_down 20s forwards;
@@ -266,6 +332,16 @@
 		}
 	}
 
+	@keyframes result {
+		from{ opacity:0;
+
+		}
+
+		to{ opacity:1;
+
+		}
+	}
+
 	
 
 
@@ -280,52 +356,311 @@
 
 	 @keyframes around {
     0% {
-      top: 50px;
-      left: 50px;
+      top: 33px;
+      left: -40px;
     }
 
-    10% {
-    	transform: rotate(0deg)
+    2% {
+    	transform: rotate(0deg);
     }
 
-    11% {
-    	transform: rotate (90deg)
-    	top: 40px;
-    	left: 50px;
+    3% {
+    	transform: rotate(90deg);
+    	top: 33px;
+    	left: 260px;
     }
 
-    24% { 
+    5% {
+
+    	transform: rotate(90deg);
+    }
+
+    6% {
+    	transform: rotate(0deg);
+    	top: 76px;
+    	left: 260px;
+    }
+
+    8% { 
       transform: rotate(0deg); 
     }
-    25% {
+
+    9% {
       transform: rotate(90deg);
-      top: 50px;
-      left: 250px;
+      top: 79px;
+      left: 396px;
     }
-    49% { 
+    11% { 
       transform: rotate(90deg); 
     }
-    50% {
+    12% {
       transform: rotate(180deg); 
-      top: 250px;
-      left: 250px;
+      top: 124px;
+      left: 396px;
     }
-    74% { 
+    
+    14% { 
       transform: rotate(180deg); 
     }
-    75% {
-      transform: rotate(270deg); 
-      top: 250px;
-      left: 500px;
+    15% {
+      transform: rotate(90deg); 
+      top: 124px;
+      left: 260px;
     }
-    99% {
-      transform: rotate(270deg);
+
+    17% {
+    	transform: rotate(90deg);
     }
-    100% { 
-      transform: rotate(360deg);  
-      top: 700px;
-      left: 500px;
+
+     18% {
+    	transform: rotate(180deg);
+    	top: 175px;
+      	left: 260px;
     }
+
+    20% {
+    	transform: rotate(180deg);
+    }
+
+     21% {
+    	transform: rotate(90deg);
+    	top: 175px;
+      	left: 195px;
+    }
+
+    23% {
+    	transform: rotate(90deg);
+    }
+
+     24% {
+    	transform: rotate(0deg);
+    	top: 221px;
+      	left: 195px;
+    }
+
+    26% {
+    	transform: rotate(0deg);
+    }
+
+     27% {
+    	transform: rotate(90deg);
+    	top: 222px;
+      	left: 396px;
+    }
+
+    29% {
+    	transform: rotate(90deg);
+    }
+
+     30% {
+    	transform: rotate(180deg);
+    	top: 268px;
+      	left: 396px;
+    }
+
+    32% {
+    	transform: rotate(180deg);
+    }
+
+     33% {
+
+    	transform: rotate(90deg);
+    	top: 266px;
+      	left: 125px; 
+    }
+
+    35% {
+    	transform: rotate(90deg);
+    }
+
+     36% {
+    	transform: rotate(0deg);
+    	top: 410px;
+      	left: 124px;
+    }
+
+     38% {
+    	transform: rotate(0deg);
+    }
+
+     40% {
+    	transform: rotate(90deg);
+    	top: 410px;
+      	left: 328px;
+    }
+
+     41% {
+    	transform: rotate(90deg);
+    }
+
+     42% {
+    	transform: rotate(180deg);
+    	top: 455px;
+      	left: 328px;
+    }
+
+     44% {
+    	transform: rotate(180deg);
+    }
+
+     45% {
+    	transform: rotate(90deg);
+    	top: 455px;
+      	left: 260px;
+    }
+
+    47% {
+    	transform: rotate(90deg);
+    }
+
+     48% {
+    	transform: rotate(0deg);
+    	top: 597px;
+      	left: 260px;
+    }
+
+     50% {
+    	transform: rotate(0deg);
+    }
+
+     51% {
+    	transform: rotate(90deg);
+    	top: 597px;
+      	left: 260px;
+    }
+
+/*needs to be deleted  - row 13*/
+
+     53% { 
+    	transform: rotate(90deg);
+    }
+
+     54% {
+    	transform: rotate(0deg);
+    	top: 597px;
+      	left: 260px;
+    }
+
+     56% {
+    	transform: rotate(0deg);
+    }
+
+     57% {
+    	transform: rotate(90deg);
+    	top: 597px;
+      	left: 396px;
+    }
+
+     59% {
+    	transform: rotate(90deg);
+    }
+
+     60% {
+    	transform: rotate(180deg);
+    	top: 737px;
+      	left: 396px;
+    }
+
+    62% {
+    	transform: rotate(180deg);
+    }
+
+     63% {
+    	transform: rotate(90deg);
+    	top: 737px;
+      	left: 193px;
+    }
+
+    65% {
+    	transform: rotate(90deg);
+    }
+
+     66% {
+    	transform: rotate(180deg);
+    	top: 879px;
+      	left: 193px;
+    }
+
+    68% {
+    	transform: rotate(180deg);
+    }
+
+     69% {
+    	transform: rotate(90deg);
+    	top: 879px;
+      	left: 261px;
+    }
+
+    71% {
+    	transform: rotate(90deg);
+    }
+
+     72% {
+    	transform: rotate(180deg);
+    	top: 924px;
+      	left: 261px;
+    }
+
+     74% {
+    	transform: rotate(180deg);
+    }
+
+     75% {
+    	transform: rotate(90deg);
+    	top: 924px;
+      	left: 121px;
+    }
+
+     77% {
+    	transform: rotate(90deg);
+    }
+
+     78% {
+    	transform: rotate(0deg);
+    	top: 1112px;
+      	left: 121px;
+    }
+
+     80% {
+    	transform: rotate(0deg);
+    }
+
+     81% {
+    	transform: rotate(90deg);
+    	top: 1112px;
+      	left: 260px;
+    }
+
+     83% {
+    	transform: rotate(90deg);
+    }
+
+     84% {
+    	transform: rotate(0deg);
+    	top: 1161px;
+      	left: 261px;
+    }
+
+     86% {
+    	transform: rotate(0deg);
+    }
+
+     87% {
+    	transform: rotate(0deg);
+    	top: 1161px;
+      	left: 550px;
+    }
+
+     100% {
+    	top: 1161px;
+      	left: 550px;
+     }
+
+
+
+
+
+    
   }
 
 		
@@ -341,6 +676,9 @@
 				/* click on button 1, show the first line */
 				$(".clickhere").click(function(){
 
+					$('.car').addClass('go');
+					$('.result').addClass('show-result');
+
 					// $(".poster").addClass('scroll');
 					$(".r1 .a").addClass('fill');
 					$(".r2 .c").addClass('fill');
@@ -355,8 +693,18 @@
 					  $(".r11 .b").addClass('fill');
 					  $(".r12 .c").addClass('fill');
 					  $(".r13 .c").addClass('fill');
-					  $(".r14 .c").addClass('fill');
-					  $(".r15 .a").addClass('fill');
+					  $(".r14 .e").addClass('fill');
+					  $(".r15 .e").addClass('fill');
+					  $(".r16 .b").addClass('fill');
+					  $(".r17 .b").addClass('fill');
+					  $(".r18 .b").addClass('fill');
+					  $(".r19 .c").addClass('fill');
+					  $(".r20 .a").addClass('fill');
+					  $(".r21 .a").addClass('fill');
+					  $(".r22 .a").addClass('fill');
+					  $(".r23 .a").addClass('fill');
+					  $(".r24 .c").addClass('fill');
+					  $(".r25 .e").addClass('fill');
 					
 
 				});
@@ -533,7 +881,7 @@
 
 				</div>
 
-				<div class="row 15">
+				<div class="row r14">
 
 					<div class="square"> </div>
 					<div class="number">14</div>
@@ -545,7 +893,7 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row r15">
 
 					<div class="square"> </div>
 					<div class="number">15</div>
@@ -557,19 +905,7 @@
 
 				</div>
 
-				<div class="row">
-
-					<div class="square"> </div>
-					<div class="number">15</div>
-					<div class="oval a">a</div>
-					<div class="oval b">b</div>
-					<div class="oval c">c</div>
-					<div class="oval d">d</div>
-					<div class="oval e">e</div>
-
-				</div>
-
-				<div class="row">
+				<div class="row r16">
 
 					<div class="square"> </div>
 					<div class="number">16</div>
@@ -581,7 +917,7 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row r17">
 
 					<div class="square"> </div>
 					<div class="number">17</div>
@@ -593,7 +929,7 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row r18">
 
 					<div class="square"> </div>
 					<div class="number">18</div>
@@ -605,7 +941,7 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row r19">
 
 					<div class="square"> </div>
 					<div class="number">19</div>
@@ -617,7 +953,7 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row r20">
 
 					<div class="square"> </div>
 					<div class="number">20</div>
@@ -629,7 +965,7 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row r21">
 
 					<div class="square"> </div>
 					<div class="number">21</div>
@@ -641,7 +977,7 @@
 
 				</div>
 
-					<div class="row">
+				<div class="row r22">
 
 					<div class="square"> </div>
 					<div class="number">22</div>
@@ -653,7 +989,7 @@
 
 				</div>
 
-					<div class="row">
+					<div class="row r23">
 
 					<div class="square"> </div>
 					<div class="number">23</div>
@@ -665,7 +1001,7 @@
 
 				</div>
 
-					<div class="row">
+					<div class="row r24">
 
 					<div class="square"> </div>
 					<div class="number">24</div>
@@ -677,7 +1013,7 @@
 
 				</div>
 
-					<div class="row">
+					<div class="row r25">
 
 					<div class="square"> </div>
 					<div class="number">25</div>
@@ -688,6 +1024,10 @@
 					<div class="oval e">e</div>
 
 				</div>
+
+			
+
+				<div class="result">result</div>
 
 				<div class="endtrip"> End Your Trip </div>
 
