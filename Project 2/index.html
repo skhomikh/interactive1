@@ -31,17 +31,18 @@
     }
 
     .result {
-    	background-color: transparent;
+    	background-color: white;
 	    height: 200px;
 	    width: 100%;
 	    opacity: 0;
 	    position: absolute;
 	    bottom: 0;
-	    background-image: <img src="star1.png"/>
+	    
     }
 
     .show-result {
     	animation: result 1s 26s forwards;
+  
     }
 
 	.poster {
@@ -163,7 +164,7 @@
 	}
 
 	.clickhere:hover {
-    background-color: red;
+    background-color: #4c4c4c;
 	}
 
 
@@ -340,17 +341,18 @@
 	}
 
 	@keyframes result {
-		0% { background-image: <img src="star1.png"/>
+		from {
+			opacity: 0;
 
 		}
 
-		50% { background-image: <img src="star2.png"/>
+		to { opacity: 100;
 
 		}
 
-		100% { background-image: <img src="star3.png"/>
+		/*100% { background-image: <img src="star3.png"/>
 
-		}
+		}*/
 
 
 	}
@@ -589,13 +591,13 @@
     }
 
      66% {
-    	transform: rotate(180deg);
+    	transform: rotate(0deg);
     	top: 879px;
       	left: 193px;
     }
 
     68% {
-    	transform: rotate(180deg);
+    	transform: rotate(0deg);
     }
 
      69% {
@@ -1040,7 +1042,7 @@
 
 			
 
-				<div class="result"> </div>
+				<div class="result"> <img src="star3.png" /> </div>
 
 				<div class="endtrip"> End Your Trip </div>
 
