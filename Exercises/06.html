@@ -5,80 +5,98 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <title>
-    Exercise 7
+    Exercise 6
   </title>
   <style>
 
-	  body {
-	  		text-align: center;
+	  img {
+  		margin: 50px;
 	  }
 
-  	#pause-vid {
-  		display: none;
-  	}
+	  #dog {
+	  	width: 400px;
+	  	height: 300px;
+	  	background-image: url('dog.jpeg');
+	  	background-size: contain;
+	  	background-repeat: no-repeat;
+	  	cursor: pointer;
+	  }
 
-  	.btn {
-  		letter-spacing: 2px;
-  		font-size:16px;
-  		font-family: Arial, Helvetica, sans-serif;
-  		font-weight: bold;
-  		cursor: pointer;
-  	}
-    
+	 /* #dog:hover {
+	  	background-image: url('dog2.jpg');
+	  }*/
+
+	  #cat {
+	  	width: 400px;
+	  	height: 300px;
+	  	background-image: url('cat.jpg');
+	  	background-size: contain;
+	  	background-repeat: no-repeat;
+	  	cursor: pointer;
+	  }
+
+	    #cat:hover {
+	  	background-image: url('cat_2.png');
+	  }
+
+
+	    #dog:hover {
+	  	background-image: url('dog_2.jpg');
+	  }
+
+
+	
+
   </style>
 
   <script>
+    
+    $(document).ready(function(){
 
-  	$(document).ready(function(){
+    	$("#dog").hover(
 
-  		$("#play-vid").click(function(){
 
-  			$(this).hide();
-  			$("#pause-vid").show();
-  			$("#bart")[0].play();
+    		function(){
+			//hoverin
+				
+				$("#bark")[0].pause();
+				$("#bark")[0].currentTime = 0;
+	    		$("#bark")[0].play();
 
-  		});
+	    	},
+	    	function(){
+	    		//hoverout
+	    	}
 
-  		$("#pause-vid").click(function(){
+	  );
 
-  			$(this).hide();
-  			$("#play-vid").show();
-  			$("#bart")[0].pause();
 
-  		});
+    	$("#cat").click(function(){
+		
+	    		$("#meow")[0].play();
 
-  		$("#bart").on('ended',function(){
-  			$("#play-vid").show();
-  			$("#pause-vid").hide();
+	
+
     	});
 
-  	});
-    
+    });
+
   </script>
 </head>
 
 <body>
+	
+	<div id="dog"></div>
+	<div id="cat"></div>
+	
+  <audio id="bark">
+    <source src="bark.wav" type="audio/wav">
+	</audio>
+  
+  <audio id="meow">
+    <source src="meow.wav" type="audio/wav">
+	</audio>
 
-	<p>
-		<button id="play-vid" class="btn">PLAY</button>
-		<button id="pause-vid" class="btn">PAUSE</button>
-
-		<br />
-		<br />
-
-		<video id="bart" width="360" height="640">
-		  <source src="bart.mp4" type="video/mp4">
-		</video>
-	</p>
-
-	<video id="bike" width="640" height="360" autoplay controls loop>
-	  <source src="bike.mp4" type="video/mp4">
-	</video>
-
-	<br />
-	<br />
-
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/XRaq9hY16rk" frameborder="0" allowfullscreen></iframe>
 
 </body>
 </html>
