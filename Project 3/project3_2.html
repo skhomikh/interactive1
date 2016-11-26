@@ -3,10 +3,17 @@
 <html lang="en">
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+
   <title>
     Project 3
   </title>
   <style>
+
+ body {
+  font-family: 'Source Sans Pro', sans-serif;
+ }
 
  .container {
 	  margin: 100px auto;
@@ -31,8 +38,8 @@
   position: relative;
 }
 
-.grid-element:hover .image{
-   opacity:5%;
+.grid-element:hover img {
+   opacity:0.3;
 
 }
 
@@ -46,6 +53,19 @@
   width: 100%;
   text-align: center;
   display: none;
+  text-transform: uppercase;
+  size:600;
+  color: #3b3b3b;
+  padding-bottom:20px;
+  text-transform: bold;
+}
+
+.coverphoto {
+  width: 100%;
+  position:absolute;
+  top:0;
+  height: 600px;
+  color:purple;
 }
 
 
@@ -60,7 +80,7 @@
 
   <a class="grid-element" href="index.html">
     <img src="muni.png" /> 
-    <div class="text"> Seeing and Hearing Muni 11/23/16 Market Street, San Francisco </div>
+    <div class="text"> Seeing and Hearing Muni <br />  11/23/16 <br /> Market Street, San Francisco </div>
   </a>
 
   
