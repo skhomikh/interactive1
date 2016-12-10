@@ -14,8 +14,26 @@
 	  }
 
     .container {
-      width: 10000px;
+      position:relative;
+      width: 9000px;
+      height: 600px;
+      background-image: url("sound2.png");
+      background-position: center center;
+      margin: auto;
+      animation: sound 100s forwards;
     }
+
+    @keyframes sound {
+      from {
+        right:0px;
+      }
+
+      to {
+        right: 600px;
+      }
+
+    }
+
 
 
   	button {
@@ -46,8 +64,9 @@
 
     .pullquote {
 
-   
-    margin-top: 390px;
+   position: absolute;
+    top: 390px;
+    left: -1000px;
     font-size: 33px;
     font-weight: 400;
     letter-spacing: 10px;
@@ -57,25 +76,253 @@
     line-height: 119%;
     margin-left: 120px;
     color: #940828;
-    opacity: 0.55;
+    opacity: 0;
+
 
    }
 
 
    .show-pullquote {
-    animation: result .5s 20s forwards;;
+    animation: result 5s 19.8s forwards;
 
    }
 
-    @keyframes pullquote {
-    from {
+   .pullquote2 {
+    animation: result 5s 90s forwards;
+
+   }
+
+   .title {
+    position: relative;
+    top: 390px;
+    left: -1000px;
+    font-size: 33px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    color: #5d5d5d;
+    text-transform: uppercase;
+    transform: scaleY(5.5) skewX(-53deg);
+    line-height: 119%;
+    margin-left: 120px;
+    color: #940828;
+    opacity: 0;
+
+   }
+
+   .show-title {
+    animation: title 5s 1s forwards;
+
+   }
+
+   @keyframes title {
+    0% {
       opacity: 0;
+      left: -1000px;
 
     }
 
-    to { opacity: 100;
+    82% { opacity: 0.65;
+    left: 0px;
 
     }
+
+     84% { opacity: 0.65;
+    left: 0px;
+
+    }
+
+     85% { opacity: 0.55;
+    left: 0px;
+
+    }
+
+    87% {
+      opacity: 0.55;
+      left: 0px;
+
+    }
+
+     88% {
+      opacity: 0.45;
+      left: 0px;
+
+    }
+
+    89% { opacity: 0.45;
+    left: 0px;
+
+    }
+
+    90% { opacity: 0.35;
+    left: 0px;
+
+    }
+
+
+    91% { opacity: 0.35;
+    left: 0px;
+
+    }
+
+    92% { opacity: 0.25;
+    left: 0px;
+
+    }
+
+     93% { opacity: 0.25;
+    left: 0px;
+
+    }
+
+    94% {
+      opacity: 0.15;
+      left: 0px;
+
+    }
+
+    95% {
+      opacity: 0.15;
+      left: 0px;
+
+    }
+
+    96% {
+      opacity: 0.05;
+      left: 0px;
+
+    }
+
+    97% {
+      opacity: 0.05;
+      left: 0px;
+
+    }
+
+    98% { opacity: 0.02;
+    left: 0px;
+
+    }
+
+
+    99% {
+      opacity: 0.02;
+      left: 0px;
+
+    }
+
+    100% { opacity: 0;
+    left: 0px;
+
+    }
+
+   }
+
+
+
+
+    @keyframes result {
+    0% {
+      opacity: 0;
+      left: -1000px;
+
+    }
+
+    82% { opacity: 0.65;
+    left: 0px;
+
+    }
+
+     84% { opacity: 0.65;
+    left: 0px;
+
+    }
+
+     85% { opacity: 0.55;
+    left: 0px;
+
+    }
+
+    87% {
+      opacity: 0.55;
+      left: 0px;
+
+    }
+
+     88% {
+      opacity: 0.45;
+      left: 0px;
+
+    }
+
+    89% { opacity: 0.45;
+    left: 0px;
+
+    }
+
+    90% { opacity: 0.35;
+    left: 0px;
+
+    }
+
+
+    91% { opacity: 0.35;
+    left: 0px;
+
+    }
+
+    92% { opacity: 0.25;
+    left: 0px;
+
+    }
+
+     93% { opacity: 0.25;
+    left: 0px;
+
+    }
+
+    94% {
+      opacity: 0.15;
+      left: 0px;
+
+    }
+
+    95% {
+      opacity: 0.15;
+      left: 0px;
+
+    }
+
+    96% {
+      opacity: 0.05;
+      left: 0px;
+
+    }
+
+    97% {
+      opacity: 0.05;
+      left: 0px;
+
+    }
+
+    98% { opacity: 0.02;
+    left: 0px;
+
+    }
+
+
+    99% {
+      opacity: 0.02;
+      left: 0px;
+
+    }
+
+    100% { opacity: 0;
+    left: 0px;
+
+    }
+
+  }
+
 
     /*.frame {
       height: 600px;
@@ -148,12 +395,15 @@
 </head>
 
 <body> 
+
+<div class="pullquote show-pullquote2"> Some on their way to work, some to an unknown destination </div> 
+ <div class="pullquote pullquote2"> All have stories, pasts, heartache and joy different to our own. </div> 
+  <div class="title show-title"> Looking vs. Seeing: Public Transportation </div>
   
 <div class="container"> 
 
-<img src="sound.png" />
 
-  <div class="box s1"> <div class="pullquote"> All have stories, pasts, heartache and joy different to our own. </div> 
+ 
 
   <audio autoplay>
     <source src="muni.m4a" type="audio/mp4">
@@ -161,11 +411,7 @@
 
 
 
-  </div>
-  <div class="box s2"></div>
-  <div class="box s3"></div>
-  <div class="box s4"></div>
-  <div class="box s5"></div>
+  
 
   <div class="nav">
         <a href="project3_2.html"> &laquo; home </a>
