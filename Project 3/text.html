@@ -15,10 +15,11 @@
  }
 
  .title {
- 	font-size: 50px;
+ 	font-size: 48px;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #ddd;
+    padding: 10px;
 
  }
 
@@ -32,15 +33,40 @@
 
  }
 
- .nav {
- 	margin-left:102px;
- 	color: #5d5d5d;
- 	text-transform: uppercase;
+   	.nav {
+  	position: fixed;
+    top: -15px;
+    left: 1178px;
+    color: #5d5d5d;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 10px;
+  	}
 
- }
-
- .active {
+       .active {
     background-color: #5d5d5d;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 115px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #940828;
     color: white;
 }
 
@@ -67,7 +93,7 @@
 
 	<p> All joined together on an average day. <span> Some on their way to work. Some to an unknown destination. </span> Some looking for themselves, new places, new friends. </p>
 
-	<p> often make an effort to look closely at my surroundings, and form stories for the people around me. I wonder if my story is any more rich and vibrant then the woman across from me or behind me. I wonder, what kind of struggles have they overcome. </p>
+	<p> I often make an effort to look closely at my surroundings, and form stories for the people around me. I wonder if my story is any more rich and vibrant then the woman across from me or behind me. I wonder, what kind of struggles have they overcome. </p>
 
 	<p><span> The bus creaks and crokes.</span></p>
 
@@ -76,10 +102,13 @@
 
 </div>
 
-<div class="nav">
-		<a class="active" href="text.html"> text </a>
-        <a href="index.html"> podcast </a>
-        <a href="project3_2.html"> home </a>
+  <div class="nav">
+       <ul>
+       <li> <a href="index.html"> podcast </a> </li>
+        <li> <a href="02.html"> next </a> </li>
+        <li> <a class="active" href="text.html"> text </a> <li>
+        <li> <a href="project3_2.html"> home </a> </li>
+      </ul>
   </div>
 
 
