@@ -62,6 +62,12 @@
     color: white;
 }
 
+ .controls {
+      position: fixed;
+      top: -15px;
+      left: 1178px;
+    }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -97,7 +103,7 @@ li a:hover {
     .pullquote {
 
    position: absolute;
-    top: 270px;
+    top: 240px;
     left: -1000px;
     font-size: 33px;
     font-weight: 400;
@@ -130,25 +136,31 @@ li a:hover {
    }
 
    .show-pullquote4 {
-    animation: result 10s 28s forwards;
+    animation: result 15s 28s forwards;
 
    }
 
 
    .show-pullquote5 {
-    animation: result 10s 37s forwards;
+    animation: result 16s 42s forwards;
 
    }
 
    .show-pullquote6 {
-    animation: result 10s 19s forwards;
+    animation: result 16s 57s forwards;
 
    }
 
    .show-pullquote7 {
-    animation: result 10s 27s forwards;
+    animation: result 10s 68s forwards;
 
    }
+
+    .show-pullquote8 {
+    animation: result 20s 75s forwards;
+
+   }
+
 
    .title {
     position: relative;
@@ -403,9 +415,9 @@ li a:hover {
     .s4 {background-image: url('sound.png');}
     .s5 {background-image: url('sound.png');}
 
-    .audio {
 
-    }
+
+
 
   </style>
 
@@ -456,14 +468,19 @@ li a:hover {
 
 <body> 
 
-<div class="pullquote show-pullquote5"> The rich and vibrant stories </div> 
+<div class="pullquote show-pullquote8"> Most fail to notice they are not alone. </div> 
+<div class="pullquote show-pullquote7"> The air fills itself with breadths of pure happiness </div> 
+<div class="pullquote show-pullquote6"> a destination to some, a disadvantage of time for others. </div> 
+<div class="pullquote show-pullquote5"> The rich and vibrant stories of the woman across from me or behind me </div> 
 <div class="pullquote show-pullquote4"> Some on their way to work, some to an unknown destination </div> 
  <div class="pullquote show-pullquote3"> All have stories, pasts, heartache and joy different to our own. </div> 
   <div class="pullquote show-pullquote2"> Looking both wise and lonely in the eyes. </div> 
   <div class="pullquote show-pullquote1"> Pouring sweat off the biker to your right. </div> 
   <div class="title show-title"> Looking vs. Seeing: Public Transportation </div>
 
-
+<audio autoplay controls>
+    <source src="muni.m4a" type="audio/mp4">
+  </audio>
  
   
 <div class="container"> 
@@ -471,9 +488,7 @@ li a:hover {
 
  
 
-  <audio autoplay>
-    <source src="muni.m4a" type="audio/mp4">
-  </audio>
+  
 
 
 
