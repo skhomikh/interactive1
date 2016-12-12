@@ -4,12 +4,15 @@
 <html lang="en">
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+
   <title>
     Exercise 5
   </title>
   <style>
 	  body {
 	  	margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
 
 	  }
 
@@ -47,9 +50,15 @@
   		position: fixed;
   		top:100px;
   		left:0;
-  		background-color: #FFF;
+  		color: #5d5d5d;
   		padding: 15px;
+      text-transform: uppercase;
   	}
+
+       .active {
+    background-color: #5d5d5d;
+    color: white;
+}
 
     .box {
     	height: 800px;
@@ -83,12 +92,38 @@
 
 
    .show-pullquote1 {
-    animation: result 5s 19.8s forwards;
+    animation: result 10s 6s forwards;
 
    }
 
    .show-pullquote2 {
-    animation: result 5s 90s forwards;
+    animation: result 8s 15s forwards;
+
+   }
+
+   .show-pullquote3 {
+    animation: result 6s 19s forwards;
+
+   }
+
+   .show-pullquote4 {
+    animation: result 6s 27s forwards;
+
+   }
+
+
+   .show-pullquote5 {
+    animation: result 10s 35s forwards;
+
+   }
+
+   .show-pullquote6 {
+    animation: result 10s 19s forwards;
+
+   }
+
+   .show-pullquote7 {
+    animation: result 10s 27s forwards;
 
    }
 
@@ -110,9 +145,11 @@
    }
 
    .show-title {
-    animation: title 5s 1s forwards;
+    animation: title 6s 1s forwards;
 
    }
+
+
 
    @keyframes title {
     0% {
@@ -396,9 +433,15 @@
 
 <body> 
 
-<div class="pullquote show-pullquote2"> Some on their way to work, some to an unknown destination </div> 
- <div class="pullquote show-pullquote1"> All have stories, pasts, heartache and joy different to our own. </div> 
+<div class="pullquote show-pullquote5"> I often make an effort to look closely at my surroundings </div> 
+<div class="pullquote show-pullquote4"> Some on their way to work, some to an unknown destination </div> 
+ <div class="pullquote show-pullquote3"> All have stories, pasts, heartache and joy different to our own. </div> 
+  <div class="pullquote show-pullquote2"> Looking both wise and lonely in the eyes. </div> 
+  <div class="pullquote show-pullquote1"> Pouring sweat off the biker to your right. </div> 
   <div class="title show-title"> Looking vs. Seeing: Public Transportation </div>
+
+
+ 
   
 <div class="container"> 
 
@@ -414,6 +457,7 @@
   
 
   <div class="nav">
+        <a class="active" href="index.html"> podcast </a>
         <a href="02.html"> next </a>
         <a href="text.html"> text </a>
         <a href="project3_2.html"> home </a>
